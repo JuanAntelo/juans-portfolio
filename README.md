@@ -1,4 +1,4 @@
-# Pre-generated Readme file.
+# Auto-generated Readme file.
 
 # React + TypeScript + Vite
 
