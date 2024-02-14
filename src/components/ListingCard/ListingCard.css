@@ -1,0 +1,80 @@
+
+.card {
+    background: #ffffff;
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card__header {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.card__header .name {
+    width: 100%;
+    font-size: 15px;
+    color: #78858F;
+    font-weight: 500;
+}
+.card__header .name span {
+    display: block;
+    color: #000000;
+    font-size: 20px;
+}
+
+.card__body {
+    margin: 0 auto;
+}
+
+.card__body img {
+    max-width: 250px;
+    height: 275px;
+}
+.card__footer {
+    padding: 24px;
+    font-size: 18px;
+    color: #78858F;
+}
+
+.price {
+    color: #54cd38 !important;
+}
+
+.read-more-btn-wrapper {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.read-more-btn {
+    color: #000;
+    width: 150px;
+    background: #7c9ecc;
+    font-size: 20px;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 0px;
+    cursor: pointer;
+    font-weight: 300;
+    margin-top: 30px;
+}
+
+.like-btn {
+    cursor: pointer;
+}
+
+.prevent-highlight {
+    /* prevents highlighting text on double click */
+    user-select: none; /* standard syntax */
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+}
+
+.short-description {
+    height: 175px;
+    overflow: hidden;
+}

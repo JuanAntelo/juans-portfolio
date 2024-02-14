@@ -1,0 +1,25 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Open Sans';
+  margin: 0px;
+  background-color: #06345c;
+  color: #FFF;
+}
+
+.app-section {
+  padding: 24px;
+  padding-left: 48px;
+  background-color: #212529;
+}
+
+.text-center {
+  text-align: center;
+}
+
+a {
+  text-decoration: none !important;
+}
