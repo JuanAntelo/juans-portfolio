@@ -7,7 +7,7 @@ function Navbar() {
                 <div className="nav-item">
                   <span>Juan's Portfolio</span>
                 </div>
-                <span>antelo.juan@gmail.com</span>
+                <span>https://github.com/JuanAntelo/juans-portfolio</span>
             </div>
         </div>
     )
