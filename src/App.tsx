@@ -7,6 +7,7 @@ import ChartJSChart from './components/ChartJSChart/ChartJSChart'
 import HighChartsChart from './components/HighChartsChart/HighChartsChart'
 import D3ScatterChart from './components/D3Chart/D3ScatterChart'
 import Listing from './types/Listing';
+import React from 'react';
 
 function App() {
 

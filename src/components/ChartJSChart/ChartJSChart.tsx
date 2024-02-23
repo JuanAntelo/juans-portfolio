@@ -8,6 +8,7 @@ import {
 } from 'chart.js';
 import { Scatter } from 'react-chartjs-2';
 import Listing from '../../types/Listing';
+import React from 'react';
 
 interface ChartJSChartProps {
   listings: Listing[],

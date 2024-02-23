@@ -1,6 +1,7 @@
 import './ListingWrapper.css'
 import ListingCard from '../ListingCard/ListingCard'
 import Listing from "../../types/Listing"
+import React from 'react'
 
 interface ListingWrapperProps {
     listings: Listing[]

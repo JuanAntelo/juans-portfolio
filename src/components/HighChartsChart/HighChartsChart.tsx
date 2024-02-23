@@ -1,5 +1,6 @@
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
+import React from 'react'
 
 interface HighChartsChartProps {
     listingsHighestRangeCount: number,
