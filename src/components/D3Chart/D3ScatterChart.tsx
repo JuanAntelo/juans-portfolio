@@ -2,7 +2,6 @@ import * as d3 from 'd3';
 import { useRef, useEffect } from "react"
 import Listing from '../../types/Listing';
 import "./D3ScatterChart.css"
-import React from 'react';
 
 interface D3ScatterChartProps {
     listings: Listing[],

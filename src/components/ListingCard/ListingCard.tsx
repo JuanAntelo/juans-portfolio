@@ -3,7 +3,6 @@ import Listing from '../../types/Listing'
 import './ListingCard.css'
 import HeartIcon from "../../assets/heart.svg"
 import HeartIconFilled from "../../assets/heartFilled.svg"
-import React from 'react'
 
 interface ListingCardProps {
     listing: Listing
