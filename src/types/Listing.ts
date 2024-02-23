@@ -26,7 +26,10 @@ interface Listing {
     MASTER_BATH: string,
     PARKING_SPACES: string,
     LOT_SIZE: string,
-    SQUARE_FEET: string
+    SQUARE_FEET: string,
+    LIST_PRICE_AS_NUM?: number,
+    NO_ROOMS_AS_NUM?: number,
+    NO_BEDROOMS_AS_NUM?: number
 }
 
 export default Listing

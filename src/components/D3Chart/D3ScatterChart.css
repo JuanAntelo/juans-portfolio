@@ -1,0 +1,13 @@
+.flex-container {
+    display: flex;
+}
+.monthly-price-label {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.room-count-label {
+    width: 600px;
+    text-align: center;
+}

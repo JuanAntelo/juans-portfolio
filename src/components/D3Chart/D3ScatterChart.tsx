@@ -1,8 +1,15 @@
 import * as d3 from 'd3';
 import { useRef, useEffect } from "react"
-import data from "../../../data/aapl.json"
+import Listing from '../../types/Listing';
+import "./D3ScatterChart.css"
 
-function D3ScatterChart() {
+interface D3ScatterChartProps {
+    listings: Listing[],
+    maxRoomCount: number,
+    maxListPrice: number
+}
+
+function D3ScatterChart({listings, maxRoomCount, maxListPrice} : D3ScatterChartProps) {
     const ref = useRef<SVGSVGElement | null>(null)
 
     useEffect(() => {
@@ -25,7 +32,7 @@ function D3ScatterChart() {
 
         // Add X axis
         var x = d3.scaleLinear()
-            .domain([0, 4000])
+            .domain([0, maxRoomCount])
             .range([ 0, width ]);
         svg.append("g")
             .attr("transform", "translate(0," + height + ")")
@@ -33,42 +40,27 @@ function D3ScatterChart() {
 
         // Add Y axis
         var y = d3.scaleLinear()
-            .domain([0, 500000])
+            .domain([0, maxListPrice])
             .range([ height, 0]);
         svg.append("g")
             .call(d3.axisLeft(y));
 
-        // Add X axis label:
-        // svg.append("text")
-        //     .attr("text-anchor", "end")
-        //     .attr("x", width/2 + margin.left)
-        //     .attr("y", height + margin.top + 20)
-        //     .text("Sepal Length");
-
-        // Y axis label:
-        // svg.append("text")
-        //     .attr("text-anchor", "end")
-        //     .attr("transform", "rotate(-90)")
-        //     .attr("y", -margin.left + 20)
-        //     .attr("x", -margin.top - height/2 + 20)
-        //     .text("Petal Length")
-
         // Add dots
         svg.append('g')
             .selectAll("dot")
-            .data(data)
+            .data(listings)
             .enter()
             .append("circle")
-            .attr("cx", function (d) { return x(d.GrLivArea); } )
-            .attr("cy", function (d) { return y(d.SalePrice); } )
+            .attr("cx", function (d) { return x(d.NO_ROOMS_AS_NUM!); } )
+            .attr("cy", function (d) { return y(d.LIST_PRICE_AS_NUM!); } )
             .attr("r", 1.5)
             .style("fill", "#69b3a2")
     }
 
     return (
         <>
-            <div style={{ display: 'flex' }}>
-                <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}><span>Monthly Price</span></div>
+            <div className="flex-container">
+                <div className="monthly-price-label"><span>Monthly Price</span></div>
                 <div>
                     <svg
                         width={400}
@@ -77,7 +69,7 @@ function D3ScatterChart() {
                     />
                 </div>
             </div>
-            <div style={{ width: '600px', textAlign: 'center' }}>Square Feet</div>
+            <div className="room-count-label">Number of Rooms</div>
         </>
     )
 }
